@@ -1,0 +1,111 @@
+/*############### FORMAT OF MODEL BOX #################*/
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+/*#####################################################*/
+
+body{
+  background-color: hsl(0, 0%, 3%);
+}
+
+/*################### COUNT 1UP, HIGH, and SCORE #####################*/
+header, article{
+  margin-left: 25%;
+  margin-right: 25%;
+}
+
+header{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-row: repeat(2, 3ex) ;
+  color: hsl(0, 0%, 100%);
+  margin: auto 25%;
+}
+
+header>section{
+  text-align: center;
+  font-weight: 600;
+}
+/*####################################################################*/
+
+/*################# SCENARY #################*/
+article{
+  display: grid;
+  grid-template-columns: repeat(26, 1fr);
+  grid-template-rows: repeat(29, 1fr);
+  border-style: double;
+  border-color: hsl(240, 100%, 50%);
+  border-width: 1rem;
+  border-radius: 5%;
+  height: 80%;
+  background-color: gray;
+}
+
+.pacman, .ghost{
+  position: relative;
+}
+
+.pacman{
+  width: 20px;
+  height: 20px;
+  background-color:hsl(60, 100%, 50%);
+  border-radius: 50%;
+  grid-area: pacman;
+}
+
+.ghost{
+  width: 20px;
+  height: 20px;
+  grid-area: ghost;
+}
+
+.pink{
+  background-color: hsl(350, 100%, 88%);
+}
+
+.orange{
+  background-color: hsl(39, 100%, 50%);
+}
+
+.red{
+  background-color: hsl(0, 100%, 50%);
+}
+
+.cian{
+  background-color: hsl(180, 100%, 50%);
+}
+
+.pill{
+  background-color: hsl(29, 61%, 82%);
+  color: hsl(29, 61%, 82%);
+  width: 1ch;
+  height: 1ch;
+  margin: 1px;
+  grid-area: p;
+}
+
+.super-pill{
+  grid-area: sp;
+}
+
+article{
+  /* 
+  grid 26x29
+  p : pill
+  b : block 
+  */
+  grid-template-areas: 
+  "p,p,p,p,p,p,p,p,p,p,p,p,b,b,p,p,p,p,p,p,p,p,p,p,p,p",
+  "p,b,b,b,b,p,b,b,b,b,b,p,b,b,p,b,b,b,b,p,b,b,b,b,b,p",
+  "p,b,b,b,b,p,b,b,b,b,b,p,b,b,p,b,b,b,b,p,b,b,b,b,b,p",
+  "p,b,b,b,b,p,b,b,b,b,b,p,b,b,p,b,b,b,b,p,b,b,b,b,b,p",
+  "p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p,p",
+  "p,b,b,b,b,p,b,b,p,b,b,b,b,b,b,b,b,p,b,b,b,b,p,b,b,p",
+  "p,p,p,p,p,p,b,b,p,p,p,p,b,b,p,p,p,p,b,b,p,p,p,p,p,p",
+  "b,b,b,b,b,p,b,b,b,b,b,";
+}
+/*###########################################*/
